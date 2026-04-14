@@ -135,8 +135,8 @@ userPassword: 1234
 ![Creación OU](Finanzas.png)
 ![Grupo finanzas](Grupo_finanzas.png)
 ![Usuario fin1](Usuario.png)
-![Validación LDAP](Validacion1.png)
-![Validación LDAP](Validacion2.png)
+![Validación LDAP](Validación final1.png)
+![Validación LDAP](Validación final2.png)
 
 ---
 
