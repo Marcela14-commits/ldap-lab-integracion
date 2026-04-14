@@ -132,7 +132,11 @@ userPassword: 1234
 * Creación de usuario fin1
 * Resultado del comando `ldapsearch`
 
-*(Insertar aquí las capturas de pantalla)*
+![Creación OU](Finanzas.png)
+![Grupo finanzas](Grupo_finanzas.png)
+![Usuario fin1](Usuario.png)
+![Validación LDAP](Validacion1.png)
+![Validación LDAP](Validacion2.png)
 
 ---
 
