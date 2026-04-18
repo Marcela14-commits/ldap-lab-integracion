@@ -1,6 +1,6 @@
-# 📄 ldap_configuracion.md
+📄 ldap_configuracion.md
 
-## 🔹 1. ¿Qué es LDAP?
+🔹 1. ¿Qué es LDAP?
 
 LDAP (Lightweight Directory Access Protocol) es un protocolo que permite gestionar información de usuarios, grupos y recursos de forma centralizada. Se utiliza comúnmente en organizaciones para administrar accesos, autenticación y estructura organizacional.
 
@@ -12,8 +12,7 @@ Permite almacenar datos como:
 * Unidades organizativas (OU)
 
 ---
-
-## 🔹 2. Arquitectura creada
+🔹 2. Arquitectura creada
 
 Se configuró un servidor LDAP con el dominio:
 
@@ -31,42 +30,40 @@ dc=fitpower,dc=local
 ```
 
 ---
+🔹 3. Comandos utilizados
 
-## 🔹 3. Comandos utilizados
-
-### 🔸 Crear OU Finanzas
+🔸 Crear OU Finanzas
 
 ```bash
 ldapadd -x -D cn=admin,dc=fitpower,dc=local -W -f finanzas.ldif
 ```
 
-### 🔸 Crear grupo Finanzas
+🔸 Crear grupo Finanzas
 
 ```bash
 ldapadd -x -D cn=admin,dc=fitpower,dc=local -W -f grupo_finanzas.ldif
 ```
 
-### 🔸 Crear usuario fin1
+🔸 Crear usuario fin1
 
 ```bash
 ldapadd -x -D cn=admin,dc=fitpower,dc=local -W -f usuario_fin1.ldif
 ```
 
-### 🔸 Validar estructura LDAP
+🔸 Validar estructura LDAP
 
 ```bash
 ldapsearch -x -b dc=fitpower,dc=local
 ```
 
 ---
+🔹 4. Estructura creada
 
-## 🔹 4. Estructura creada
-
-### 📁 Unidad Organizativa
+📁 Unidad Organizativa
 
 * **Finanzas**
 
-### 👤 Usuario
+👤 Usuario
 
 * **fin1**
 
@@ -74,7 +71,7 @@ ldapsearch -x -b dc=fitpower,dc=local
   * Grupo: finanzas
   * Home: /home/fin1
 
-### 👥 Grupo
+👥 Grupo
 
 * **finanzas**
 
@@ -82,9 +79,9 @@ ldapsearch -x -b dc=fitpower,dc=local
 
 ---
 
-## 🔹 5. Archivos LDIF utilizados
+🔹 5. Archivos LDIF utilizados
 
-### 📄 finanzas.ldif
+📄 finanzas.ldif
 
 ```ldif
 dn: ou=Finanzas,dc=fitpower,dc=local
@@ -92,7 +89,7 @@ objectClass: organizationalUnit
 ou: Finanzas
 ```
 
-### 📄 grupo_finanzas.ldif
+📄 grupo_finanzas.ldif
 
 ```ldif
 dn: cn=finanzas,ou=Finanzas,dc=fitpower,dc=local
@@ -101,7 +98,7 @@ cn: finanzas
 gidNumber: 5002
 ```
 
-### 📄 usuario_fin1.ldif
+📄 usuario_fin1.ldif
 
 ```ldif
 dn: uid=fin1,ou=Finanzas,dc=fitpower,dc=local
@@ -123,7 +120,7 @@ userPassword: 1234
 
 ---
 
-## 🔹 6. Evidencias
+🔹 6. Evidencias
 
 📸 A continuación se incluyen capturas de:
 
@@ -132,8 +129,9 @@ userPassword: 1234
 * Creación de usuario fin1
 * Resultado del comando `ldapsearch`
 
-![Creación OU](Finanzas.png)
-![Grupo finanzas](Grupo_finanzas.png)
-![Usuario fin1](Usuario.png)
-![Validación LDAP](Validación final1.png)
-![Validación LDAP](Validación final2.png)
+<img width="670" height="160" alt="Grupa finanzas" src="https://github.com/user-attachments/assets/ccb773bf-691b-4a53-b546-70abdd0c0f0b" />
+<img width="665" height="148" alt="Usuario" src="https://github.com/user-attachments/assets/09e48424-50b3-4088-a6bd-55deded12319" />
+<img width="625" height="461" alt="Validacion final1png" src="https://github.com/user-attachments/assets/295db715-110c-4cfe-9538-b790f3be03bc" />
+<img width="683" height="448" alt="Validación final2" src="https://github.com/user-attachments/assets/24af53a8-0b08-4e73-b080-479c597f8d7e" />
+<img width="587" height="220" alt="Finanzas" src="https://github.com/user-attachments/assets/2f1d5f2d-e9b8-4a99-b4a6-f77b3b9b23a3" />
+
