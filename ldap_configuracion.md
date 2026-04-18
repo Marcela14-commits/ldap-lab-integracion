@@ -137,11 +137,3 @@ userPassword: 1234
 ![Usuario fin1](Usuario.png)
 ![Validación LDAP](Validación final1.png)
 ![Validación LDAP](Validación final2.png)
-
----
-
-## ✅ Conclusión
-
-Se logró implementar correctamente un entorno LDAP funcional, permitiendo la creación y gestión de unidades organizativas, usuarios y grupos. Esto evidencia el uso de LDAP como herramienta para la administración centralizada de recursos en una organización.
-
----
